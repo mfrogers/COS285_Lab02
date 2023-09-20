@@ -103,4 +103,10 @@ public class Fraction implements INumber{
 	private void setDenom(int denom) {
 		this.denom = denom;
 	}
+
+	public static Fraction simplify(Fraction input1) {
+		int newNum = input1.getNum()/GDC(input1);
+		int newDenom = input1.getDenom()/GDC(input1);
+		return new Fraction(newNum, newDenom);
+	}
 }	

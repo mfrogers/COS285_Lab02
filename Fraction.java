@@ -133,4 +133,12 @@ public class Fraction implements INumber{
 		}
 		input[i] = nextValue;
 	}
+	
+	public static double percent(Fraction input1) {
+		double num = input1.getNum();
+		double denom = input1.getDenom();
+		double percentage = (num/denom)*100;
+		
+		return percentage;
+	}
 }	

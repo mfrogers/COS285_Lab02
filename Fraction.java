@@ -114,5 +114,14 @@ public class Fraction implements INumber{
 			insert(input, i);
 		}
 	}
+	public static int GDC(Fraction input1) {
+		int gdc = 1;
 
+		for (int i = 1; i < Math.min(input1.getNum(), input1.getDenom()); i++) {
+			if ((input1.getNum()%i==0)&&(input1.getDenom()%i==0)) {
+				gdc = i;
+			}
+		}
+		return gdc;
+	}
 }	

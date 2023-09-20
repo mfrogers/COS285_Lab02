@@ -51,5 +51,9 @@ public class lab0W_main {
             }
         }
     }
+	
+	public void remove(Fraction input) {
+	myArrayList.remove(input); 
+    }
 
 }

@@ -109,4 +109,10 @@ public class Fraction implements INumber{
 		int newDenom = input1.getDenom()/GDC(input1);
 		return new Fraction(newNum, newDenom);
 	}
+	public static <Fraction extends Comparable<Fraction>> void sort(Fraction[] input) {
+		for (int i = 1; i < input.length; i++) {
+			insert(input, i);
+		}
+	}
+
 }	

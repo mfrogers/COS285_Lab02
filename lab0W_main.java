@@ -19,5 +19,13 @@ public class lab0W_main {
 			return true;
 		return false;
 	}
+	public boolean contains(Fraction input) {
+		for (int i = 0; i < myArrayList.size(); i++) {
+			if (myArrayList.get(i).equals(input)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 }

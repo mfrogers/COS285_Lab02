@@ -124,4 +124,13 @@ public class Fraction implements INumber{
 		}
 		return gdc;
 	}
+	
+	public static <Fraction extends Comparable<Fraction>> void insert(Fraction[] input, int i) {
+		Fraction nextValue = input[i];
+		while (i > 0 && nextValue.compareTo(input[i-1])<0) {
+			input[i]=input[i-1];
+			i--;
+		}
+		input[i] = nextValue;
+	}
 }	

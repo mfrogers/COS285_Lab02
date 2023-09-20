@@ -55,5 +55,14 @@ public class lab0W_main {
 	public void remove(Fraction input) {
 	myArrayList.remove(input); 
     }
+public boolean hasSameValue(Array F) {
+		for(int i = 0; i < F.length; i++) {
+			if(F[i] == F[(i + 1)] ) {
+				return true;
+			}
+			
+		}
+			return false;	
+	}
 
 }

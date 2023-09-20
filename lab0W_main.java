@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class lab0W_main {
@@ -19,14 +20,8 @@ public class lab0W_main {
 			return true;
 		return false;
 	}
-	public boolean contains(Fraction input) {
-		for (int i = 0; i < myArrayList.size(); i++) {
-			if (myArrayList.get(i).equals(input)) {
-				return true;
-			}
-		}
-		return false;
-	}
+	
+
 
 	 //James Libby
     //findFrequent is a method that when given an array of type double it will 
@@ -51,18 +46,4 @@ public class lab0W_main {
             }
         }
     }
-	
-	public void remove(Fraction input) {
-	myArrayList.remove(input); 
-    }
-public boolean hasSameValue(Array F) {
-		for(int i = 0; i < F.length; i++) {
-			if(F[i] == F[(i + 1)] ) {
-				return true;
-			}
-			
-		}
-			return false;	
-	}
-
 }

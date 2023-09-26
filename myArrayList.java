@@ -159,11 +159,11 @@ public class myArrayList<F> {
 -------------------------------------*/  
 	
 
-	public myArrayListIterator iterator() {
+	public Iterator<Object> myArrayListIterator() {
 		return new myArrayListIterator();
 	}
-
-	public class myArrayListIterator {
+	
+	public class myArrayListIterator implements Iterator<Object> {
 		private int currentIndex;
 
 	public myArrayListIterator() {
@@ -180,21 +180,25 @@ public class myArrayList<F> {
 	}
 
 	/**
-	 * method to check if there is an element that can be called by previous
-	 * @return true if myArrayList has previous element, false if not 
-	 * @author maxrogers
+	 * Checks the ArrayList to see if there is an element that can be called by previous
+	 * @return true if myArrayList has previous element, false if not
+	 * @author Madalyn Amero
 	 */
 	public boolean hasPrevious() {
-		return currentIndex > 0;
+		return currentIndex > 0 && get(currentIndex-1) != null;
 	}
 	
 	/**
-	 * Using the iterator, finds the index of the next element in myArrayList
-	 * @return index of the next element
-	 * @author maxrogers
+	 * Utilizes the hasNext() method to determine the index of the next element
+	 * @throws an exception if there is no next element in the ArrayList
+	 * @return the index of the next element in the ArrayList
+	 * @author Madalyn Amero
 	 */
 	public int nextIndex() {
-		return currentIndex;
+		if (!hasNext()) {
+			throw new NoSuchElementException("No next element");
+		}
+		return currentIndex+1;
 	}
 
 	/**
@@ -212,27 +216,33 @@ public class myArrayList<F> {
 		}
 
 	/**
-	 * method that returns the previous object relative to the iterator, 
-	 * and moves the iterator forward 
-	 * @return object the iterator is pointing to previous 
-	 * @author maxrogers
+	 * Checks the previous element and moves the iterator backward
+	 * @throws an exception if there is no previous element in the ArrayList
+	 * @return previous the previous Fraction element behind the iterator
+	 * @author Madalyn Amero
 	 */
 	public Fraction previous() {
 		if (!hasPrevious()) {
 			throw new NoSuchElementException("No previous element");
 		}
+		Fraction previous = get(currentIndex-1);
 		currentIndex--;
-		return get(currentIndex);
+		return previous;
 	}
 
 	/**
-	 * Using the iterator, finds the index of the previous element in myArrayList
-	 * @return index of the previous element
-	 * @author maxrogers
+	 * Checks the index of the previous item behind the item the iterator
+	 * points to
+	 * @throws an exception if there is no previous element in the ArrayList
+	 * @return the index of the previous element in the ArrayList
+	 * @author Madalyn Amero
 	 */
-	public int previousIndex() {
-		return currentIndex - 1;
-	}
+	 public int previousIndex() {
+		if (!hasPrevious()) {
+			throw new NoSuchElementException("No previous element");
+		}
+    	return (currentIndex-1);
+    }
 
 	/**
 	 * removes object at current index and moves the location of the iterator appropriately

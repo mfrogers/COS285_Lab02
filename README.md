@@ -4,4 +4,4 @@ Series of methods and classes used to manipulate an object Fraction. Fraction co
 
 Work by method: James: void add(Fraction frc), boolean hasNext(); Michael: Fraction next(), void set(Fraction frc); Madalyn: boolean hasPrevious(), int nextIndex(), Fraction previous(), int previousIndex(); Max: general re-formatting and adjusting methods from previous labs to enhance cohesiveness of current lab.
 
-Authors: Max Rogers, Madalyn Amero, James, Michael Colleran
+Authors: Max Rogers, Madalyn Amero, James Libby, Michael Colleran

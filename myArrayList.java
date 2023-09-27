@@ -280,6 +280,23 @@ public class myArrayList<F> {
     }	
 	}
 
+//    //adds a fraction to an array list of fractions
+//	//Author James Libby
+//    public void add(Fraction frc) {
+//        return elements.add(element);
+//    }   
+//
+//    //returns true if an arrayList has a next value and false if it doesn't have a next value
+//    //Author James Libby
+//    public boolean hasNext() {
+//        try {
+//            Fraction next = this.next();
+//            return true;
+//        } catch (NoSuchElementException x) {
+//            return false;
+//        }        
+//    }
+
 	
 }
 

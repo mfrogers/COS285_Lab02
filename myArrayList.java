@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
  * 
  * RESOURCES USED: chatGPT, stack Overflow, GeeksForGeeks
  * 
- * @author maxrogers 
+ * @author maxrogers, Madalyn Amero
  * @param <T> generic type, allows the use of various types including Fractions
  */
 
